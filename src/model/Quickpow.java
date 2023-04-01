@@ -1,6 +1,6 @@
 package model;
 
-public class quickpow {
+public class Quickpow {
     public static void main(String[] args) {
         System.out.println(qpow(5,2));
     }
