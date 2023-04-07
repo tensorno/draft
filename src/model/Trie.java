@@ -53,5 +53,17 @@ class Trie {
         }
         return true;
     }
-}
 
+    public boolean query(StringBuilder s)
+    {
+        Trie cur = this;
+        for(int i = s.length()-1;i>=0;i--)
+        {
+            int index = s.charAt(i)-'a';
+            if(cur.next[index]==null) return false;
+            cur = cur.next[index];
+            if(cur.isword==true) return true;
+        }
+        return false;
+    }
+}
